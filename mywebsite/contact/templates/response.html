@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block index_css %}
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+{% endblock index_css %}
+{% block title  %}
+Profiles - Mywebsite
+{% endblock  %}
+{% block content %}
+<section class="py-5">
+   {% for c in contact  %}
+   <h1>{{c.name}}</h1>
+    {{c.email}}
+    <p>pesan : {{c.message}}</p>
+   {% endfor %}
+</section>
+<!-- Call to action section-->
+
+{% endblock content %}

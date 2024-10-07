@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block index_css %}
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+{% endblock index_css %}
+{% block title  %}
+Profiles - Mywebsite
+{% endblock  %}
+{% block content %}
+<section class="bg-light py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-xxl-8">
+                <div class="text-center my-5">
+                    <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Me</span></h2>
+                    <p class="lead fw-light mb-4">My name is {{profiles.name}}</p>
+                    <p class="text-muted">{{profiles.about}}</p>
+                    <p class="text-muted">{{profiles.address}}</p>
+                    <p class="text-muted">{{profiles.education}}</p>
+                    <p class="text-muted">{{profiles.skills}}</p>
+                    <p class="text-muted">{{profiles.phone}}</p>
+                    <a href="respon">Response</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

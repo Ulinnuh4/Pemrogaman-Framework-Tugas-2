@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+    {% block title  %}
+    Resume - Mywebsite
+    {% endblock  %}
+    {% block index_css %}
+        <link rel="stylesheet" href="{% static 'static/css/styles.css' %}">
+    {% endblock index_css %}
+    {% block content %}
+    <div class="container px-5 my-5">
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Resume</span></h1>
+        </div>
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-11 col-xl-9 col-xxl-8">
+                <!-- Experience Section-->
+
+                <!-- Education Section-->
+                <section>
+                    <h2 class="text-secondary fw-bolder mb-4">Education</h2>
+                    <!-- Education Card 1-->
+                     
+                     <div class="card shadow border-0 rounded-4 mb-5">
+                        {% for r in resume %}
+                        <div class="card-body p-5">
+                            <div class="row align-items-center gx-5">
+                                <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                    <div class="bg-light p-4 rounded-4">
+                                        <div class="text-secondary fw-bolder mb-2">{{r.start_date}}</div>
+                                        <div class="mb-2">
+                                            <div class="small fw-bolder">{{r.title}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8"><div>{{r.description}}</div></div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

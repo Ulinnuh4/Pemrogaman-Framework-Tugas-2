@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block tittle %}Contact - MyWebsite{% endblock tittle %}
+
+{% block content %}
+<h1 class="text-dark">Contact</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group mb-3">
+                <label for="" class="">Name</label>
+                <input type="text" name="name" class="form-control">
+            </div>
+            <div class="form-group mb-3">
+                <label for="" class="">Email</label>
+                <input type="text" name="email" class="form-control">
+            </div>
+            <div class="form-group mb-3">
+                <label for="" class="">Message</label>
+                <textarea name="pesan" id="" class="form-control" rows="10"></textarea>
+            </div>
+            <button class="btn btn-primary">Send</button>
+            <a href="response/"></a>
+        </div>
+    </div>
+</form>
+
+{% endblock content %}
